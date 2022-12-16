@@ -102,17 +102,34 @@ for (let i = 0; i < finances.length; i++) {
 }
 
 console.log(total);
-        
-
 
 // The average of the changes in Profit/Losses over the entire period.
 
-
-
 // You will need to track what the total change in profits are from month to month and then 
 //find the average.
-
 // (Total/Number of months)
+
+let averageChange = [];
+
+for (let i = 1; i < finances.length; i++) {
+    const element = finances[i][1] - finances[i-1][1];
+
+    averageChange.push(element);
+}
+
+console.log(averageChange)
+
+
+let sumAverage = 0;
+
+for (let i = 0; i < averageChange.length; i++) {
+     
+    sumAverage += averageChange[i];
+}
+
+console.log(sumAverage);
+
+let totalAverage = Math.round(sumAverage/averageChange.length)
 
 // The greatest increase in profits (date and amount) over the entire period.
 
@@ -121,9 +138,9 @@ console.log(total);
 alert(`
 Financial Analysis
 ----------------------------
-Total Months: ${totalMonths}
-Total: ${total}
-Average  Change: $-2315.12
+Total Months: $${totalMonths}
+Total: $${total}
+Average  Change: $${totalAverage}
 Greatest Increase in Profits: Feb-2012 ($1926159)
 Greatest Decrease in Profits: Sep-2013 ($-2196167)
 `);
