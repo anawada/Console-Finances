@@ -94,12 +94,16 @@ console.log(totalMonths)
 
 // The net total amount of Profit/Losses over the entire period.
 
-    for (let i = 0; i < finances.length; i++) {
-        const number = finances[i];
+let total = 0;
 
+for (let i = 0; i < finances.length; i++) {
+    
+    total += finances[i][1];
+}
 
+console.log(total);
         
-    }
+
 
 // The average of the changes in Profit/Losses over the entire period.
 
@@ -118,7 +122,7 @@ alert(`
 Financial Analysis
 ----------------------------
 Total Months: ${totalMonths}
-Total: $2561231
+Total: ${total}
 Average  Change: $-2315.12
 Greatest Increase in Profits: Feb-2012 ($1926159)
 Greatest Decrease in Profits: Sep-2013 ($-2196167)
