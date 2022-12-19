@@ -137,6 +137,7 @@ let totalAverage = Math.round(sumAverage/averageChange.length);
 // The greatest increase in profits (date and amount) over the entire period.
 
 //find inside averageChange the biggest number and the smallest number
+// The greatest decrease in losses (date and amount) over the entire period.
 
 let max = 0;
 let min = 0;
@@ -150,10 +151,16 @@ for (let i = 0; i < averageChange.length; i++) {
     }
 }
 
+let profitIncrease = averageChange.indexOf(max);
+let profitDecrease = averageChange.indexOf(min);
+
 console.log(max);
 console.log(min);
 
-// The greatest decrease in losses (date and amount) over the entire period.
+console.log(profitIncrease);
+console.log(profitDecrease);
+
+
 
 alert(`
 Financial Analysis
