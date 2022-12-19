@@ -151,23 +151,23 @@ for (let i = 0; i < averageChange.length; i++) {
     }
 }
 
-let profitIncrease = averageChange.indexOf(max);
-let profitDecrease = averageChange.indexOf(min);
+let profitIncreaseIndex = averageChange.indexOf(max);
+let profitDecreaseIndex = averageChange.indexOf(min);
 
 console.log(max);
 console.log(min);
 
-console.log(profitIncrease);
-console.log(profitDecrease);
+console.log(profitIncreaseIndex);
+console.log(profitDecreaseIndex);
 
 
 
 alert(`
 Financial Analysis
 ----------------------------
-Total Months: $${totalMonths}
+Total Months: ${totalMonths}
 Total: $${total}
 Average  Change: $${totalAverage}
-Greatest Increase in Profits: ${finances[profitIncrease +1][0]} ($${max})
-Greatest Decrease in Profits: ${finances[profitDecrease +1][0]} ($${min})
+Greatest Increase in Profits: ${finances[profitIncreaseIndex +1][0]} ($${max})
+Greatest Decrease in Profits: ${finances[profitDecreaseIndex +1][0]} ($${min})
 `);
