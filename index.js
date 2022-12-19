@@ -109,6 +109,7 @@ console.log(total);
 //find the average.
 // (Total/Number of months)
 
+//array created just with the numbers from array finances: averageChange
 let averageChange = [];
 
 for (let i = 1; i < finances.length; i++) {
@@ -120,6 +121,8 @@ for (let i = 1; i < finances.length; i++) {
 console.log(averageChange)
 
 
+// sum of all the number elements from array averageChange 
+
 let sumAverage = 0;
 
 for (let i = 0; i < averageChange.length; i++) {
@@ -129,9 +132,26 @@ for (let i = 0; i < averageChange.length; i++) {
 
 console.log(sumAverage);
 
-let totalAverage = Math.round(sumAverage/averageChange.length)
+let totalAverage = Math.round(sumAverage/averageChange.length);
 
 // The greatest increase in profits (date and amount) over the entire period.
+
+//find inside averageChange the biggest number and the smallest number
+
+let max = 0;
+let min = 0;
+
+for (let i = 0; i < averageChange.length; i++) {
+    const element = averageChange[i];
+    if (element > max) {
+        max = averageChange[i]
+    } else if (element < min){
+        min = averageChange[i];
+    }
+}
+
+console.log(max);
+console.log(min);
 
 // The greatest decrease in losses (date and amount) over the entire period.
 
@@ -141,6 +161,6 @@ Financial Analysis
 Total Months: $${totalMonths}
 Total: $${total}
 Average  Change: $${totalAverage}
-Greatest Increase in Profits: Feb-2012 ($1926159)
-Greatest Decrease in Profits: Sep-2013 ($-2196167)
+Greatest Increase in Profits: Feb-2012 ($${max})
+Greatest Decrease in Profits: Sep-2013 ($${min})
 `);
