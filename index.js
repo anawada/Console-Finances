@@ -86,3 +86,88 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+// The total number of months included in the dataset.
+
+let totalMonths = finances.length;
+console.log(totalMonths)
+
+// The net total amount of Profit/Losses over the entire period.
+
+let total = 0;
+
+for (let i = 0; i < finances.length; i++) {
+    
+    total += finances[i][1];
+}
+
+console.log(total);
+
+// The average of the changes in Profit/Losses over the entire period.
+
+// You will need to track what the total change in profits are from month to month and then 
+//find the average.
+// (Total/Number of months)
+
+//array created just with the numbers from array finances: averageChange
+let averageChange = [];
+
+for (let i = 1; i < finances.length; i++) {
+    const element = finances[i][1] - finances[i-1][1];
+
+    averageChange.push(element);
+}
+
+console.log(averageChange)
+
+
+// sum of all the number elements from array averageChange 
+
+let sumAverage = 0;
+
+for (let i = 0; i < averageChange.length; i++) {
+     
+    sumAverage += averageChange[i];
+}
+
+console.log(sumAverage);
+
+let totalAverage = Math.round(sumAverage/averageChange.length);
+
+// The greatest increase in profits (date and amount) over the entire period.
+
+//find inside averageChange the biggest number and the smallest number
+// The greatest decrease in losses (date and amount) over the entire period.
+
+let max = 0;
+let min = 0;
+
+for (let i = 0; i < averageChange.length; i++) {
+    const element = averageChange[i];
+    if (element > max) {
+        max = averageChange[i]
+    } else if (element < min){
+        min = averageChange[i];
+    }
+}
+
+let profitIncreaseIndex = averageChange.indexOf(max);
+let profitDecreaseIndex = averageChange.indexOf(min);
+
+console.log(max);
+console.log(min);
+
+console.log(profitIncreaseIndex);
+console.log(profitDecreaseIndex);
+
+
+
+alert(`
+Financial Analysis
+----------------------------
+Total Months: ${totalMonths}
+Total: $${total}
+Average  Change: $${totalAverage}
+Greatest Increase in Profits: ${finances[profitIncreaseIndex +1][0]} ($${max})
+Greatest Decrease in Profits: ${finances[profitDecreaseIndex +1][0]} ($${min})
+`);
