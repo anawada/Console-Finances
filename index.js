@@ -168,6 +168,6 @@ Financial Analysis
 Total Months: $${totalMonths}
 Total: $${total}
 Average  Change: $${totalAverage}
-Greatest Increase in Profits: Feb-2012 ($${max})
-Greatest Decrease in Profits: Sep-2013 ($${min})
+Greatest Increase in Profits: ${finances[profitIncrease +1][0]} ($${max})
+Greatest Decrease in Profits: ${finances[profitDecrease +1][0]} ($${min})
 `);
