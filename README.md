@@ -16,9 +16,9 @@ Open the link of the deployed application to see the alert with the Financial An
 
 ## Usage 
 
-```md
+
 ![alt text](./assets/images/Deployed%20application%20.png)
-```
+
 
 ## License
 
