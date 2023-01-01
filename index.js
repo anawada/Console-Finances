@@ -90,7 +90,6 @@ var finances = [
 // The total number of months included in the dataset.
 
 let totalMonths = finances.length;
-console.log(totalMonths)
 
 // The net total amount of Profit/Losses over the entire period.
 
@@ -101,7 +100,6 @@ for (let i = 0; i < finances.length; i++) {
     total += finances[i][1];
 }
 
-console.log(total);
 
 // The average of the changes in Profit/Losses over the entire period.
 
@@ -114,7 +112,6 @@ for (let i = 1; i < finances.length; i++) {
     averageChange.push(element);
 }
 
-console.log(averageChange)
 
 
 // sum of all the number elements from array averageChange 
@@ -126,7 +123,6 @@ for (let i = 0; i < averageChange.length; i++) {
     sumAverage += averageChange[i];
 }
 
-console.log(sumAverage);
 
 let totalAverage = Math.round(sumAverage/averageChange.length);
 
@@ -150,15 +146,10 @@ for (let i = 0; i < averageChange.length; i++) {
 let profitIncreaseIndex = averageChange.indexOf(max);
 let profitDecreaseIndex = averageChange.indexOf(min);
 
-console.log(max);
-console.log(min);
-
-console.log(profitIncreaseIndex);
-console.log(profitDecreaseIndex);
 
 
 
-alert(`
+console.log(`
 Financial Analysis
 ----------------------------
 Total Months: ${totalMonths}
