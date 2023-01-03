@@ -11,13 +11,13 @@ Deployed application: https://anawada.github.io/Console-Finances/
 
 ## Installation
 
-Open the link of the deployed application to see the alert with the Financial Analysis.
+Open the link of the deployed application right click inspect the page, then open the console to see the Financial Analysis.
 
 
 ## Usage 
 
 
-![alt text](./assets/images/Deployed%20application%20.png)
+![alt text](./assets/images/printscreen-console.png)
 
 
 ## License
